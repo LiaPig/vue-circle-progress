@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="content">
+      <div v-for="(item, index) in progress" :key="index" class="circle">
+        <div>当前进度：{{item}}({{item * 100}}%)</div>
+        <div class="item">
+          <circle-progress :rate="item"></circle-progress>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CircleProgress from './components/CircleProgress.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CircleProgress
+  },
+  data() {
+    return {
+      progress: [1, 0.8, 0.7, 0.5, 0.3, 0.25, 0.125, 0]
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  .content {
+    margin: 0 auto;
+    display: block;
+    width: 100px;
+    .circle {
+      margin: 20px 0;
+      width: 100px;
+      .item {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+    }
+  }
 }
 </style>

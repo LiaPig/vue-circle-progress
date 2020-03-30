@@ -385,5 +385,6 @@ export default {
  <circle-progress :rate="0.8"></circle-progress>
 ```
 
-![图1](https://upload-images.jianshu.io/upload_images/7016617-b071e612685596d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+### 多个进度浏览图
+![图1](https://upload-images.jianshu.io/upload_images/7016617-5938967332e638c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![图2](https://upload-images.jianshu.io/upload_images/7016617-8fc8647656bcc9da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

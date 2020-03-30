@@ -75,6 +75,7 @@ export default {
       position: absolute;
       width: 50%;
       height: 50%;
+      overflow: hidden;
       background-color: #64d3f6;
       &1 {
         left: 50%;
